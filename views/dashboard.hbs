@@ -1,9 +1,27 @@
-{{> menu id="dashboard"}}
+{{> memberMenu id = "dashboard"}}
 
-<script>
-    function hide() {
-        const hidden = document.createAttribute('hidden');
-        document.getElementById('prompt').setAttributeNode(hidden);
-    }
-</script>
+<section class="ui inverted blue segment">
+    <section class="ui yellow raised segment">
+
+        {{#if goalAlert}}
+            <div class="ui warning message" id="prompt">
+                <i class="close icon" onclick="hide()"></i>
+                <div class="header">
+                    Hey there {{{member.firstName}}} you have not set any goals, click
+                    <a href="/dashboard/membergoals">here </a>to set one FATTY!!!!
+                </div>
+            </div>
+        {{else}}
+            <div class="ui negative message" id="prompt">
+                <i class="close icon" onclick="hide()"></i>
+                <div class="header">
+                    {{member.firstname}} {{member.lastname}} data
+                </div>
+            </div>
+        {{/if}}
+
+        {{> memberStats }}
+        {{> memberAddAssessment }}
+    </section>
+</section>
 

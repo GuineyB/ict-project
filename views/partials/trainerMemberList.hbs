@@ -3,24 +3,33 @@
     <div class="ui large blue ribbon label">
         <i class="info circle icon"></i> Gym Member Assessments
     </div>
-    <section class="ui center aligned segment">
-        <div class="ui raised two cards">
-            {{#each members}}
-                <tr>
-                    <td>
-                        {{firstName}}
-                    </td>
-                    <td>
-                        {{LastName}}
-                    </td>
-                    <td>
-                        <a href="/trainerDashboard/removemember/{{memberid}}" data-tooltip="confirm delete"><i class="large red trash icon"></i></a>
+    <table class="ui fixed yellow center aligned celled table">
+        <thead>
+        <tr>
+            <th>Member Name</th>
+            <th>Target Date</th>
+            <th>Target Area</th>
+            <th>Description</th>
 
-                        </a>
-                    </td>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each members}}
+            <div class="ui list">
+            <tr>
+                <td>{{member.firstname}} {{member.lastname}}</td>
+                <td>{{date}}</td>
+                <td>{{area}}</td>
+                <td>{{goal}}</td>
+                <td>{{description}}</td>
+            <td>
 
-                </tr>
-            {{/each}}
-        </div>
-    </section>
+        {{/each}}
+
+            <td>
+                <a href="/trainerDashboard/removemember/{{memberid}}" > <i class=" large red trash icon"></i> </a>
+            </td>
+
+    </table>
+</section>
 </section>
