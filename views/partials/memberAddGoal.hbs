@@ -1,0 +1,99 @@
+<section class="ui inverted blue center aligned segment">
+    <section class="ui large inverted yellow segment">
+
+        <div class="content">
+            <form class="ui raised center aligned segment form" name="memberAddAssessment" action="/trainerDashboard/trainerAddGoal" method="POST">
+                <div class="four fields">
+                    <div class="three field wide">
+                        <label>Member </label>
+                        <select class="ui dropdown" name="memberid" required>
+                            <option value="">Select Member</option>
+                            {{#each members}}
+                                <option value="{{memberid}}">{{member.firstname}}{{member.lastname}} </option>
+                            {{/each}}
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>Set Target Date</label>
+                        <div class="ui input left icon">
+                            <i class="calendar icon"></i>
+                            <input placeholder="date" type="date" name="date" required>
+                        </div>
+                    </div>
+
+                    <div class="three field wide">
+                        <label> Select Target Area </label>
+                        <select class="ui dropdown " name="area" title="area">
+                            <option value=""> Select</option>
+                            <option value="Weight"> Weight</option>
+                            <option value="Chest"> Chest</option>
+                            <option value="Thigh"> Thigh</option>
+                            <option value="Upper Arm"> Upper Arm</option>
+                            <option value="Waist"> Waist</option>
+                            <option value="Hips"> Hips</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label>Target Goal</label>
+                        <div class="ui input left icon">
+                            <i class="inverted red bullseye icon"></i>
+                            <input placeholder="set goal" type="number" name="goal" required>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label>Description</label>
+                        <label>
+                            <textarea name="description" ></textarea>
+                        </label>
+                    </div>
+                </div>
+                <button class="ui animated fade blue submit button">
+                    <div class="visible content"><i class="add circle icon"></i> Add Goal</div>
+                    <div class="hidden content">Click to Save</div>
+                </button>
+            </form>
+        </div>
+
+    </section>
+    <table class="ui fixed yellow center aligned celled table">
+        <thead>
+        <tr>
+            <th>Member Name</th>
+            <th>Target Date</th>
+            <th>Target Area</th>
+            <th>Goal</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Edit Goal</th>
+            <th>Remove</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {{#each goals}}
+            <div class="ui list">
+                <tr>
+                    <td>{{member.firstname}} {{member.lastname}}</td>
+                    <td>{{date}}</td>
+                    <td>{{area}}</td>
+                    <td>{{goal}}</td>
+                    <td>{{description}}</td>
+                    <td>{{status}}</td>
+                    <td>
+                        <a href="/trainerDashboard/{{trainerid}}/trainerUpdateGoal/{{goalid}}">
+                            <i class="large teal upload icon"></i>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="/trainerDashboard/removegoal/{{goalid}}">
+                            <i class=" large red trash icon"></i>
+                        </a>
+                    </td>
+                </tr>
+            </div>
+        {{/each}}
+        </tbody>
+    </table>
+</section>

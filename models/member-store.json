@@ -1,0 +1,142 @@
+{
+  "members": [
+    {
+      "firstname": "maggie",
+      "lastname": "simpson",
+      "gender": "female",
+      "address": "1 far far away",
+      "height": 1.5,
+      "startingWeight": 62,
+      "dateofbirth": "1991-01-01",
+      "email": "maggie.simpson@gmail.com",
+      "password": "secret",
+      "memberid": "82b0c6b0-ee02-11ea-abbc-797ae3661638",
+      "assessments": [
+        {
+          "assessmentid": "f9069571-b37e-4818-82cb-b1298070b665",
+          "date": "Mon Aug 07 2020",
+          "weight": 28,
+          "chest": 28,
+          "thigh": 18,
+          "upperArm": 18,
+          "waist": 28,
+          "hips": 38,
+          "trend": "green",
+          "comment": "maggie assessment"
+        }
+      ],
+      "goals": [
+        {
+          "goalid": "69069571-a37e-4818-81cf-f36a7070b331",
+          "memberid": "82b0c6b0-ee02-11ea-abbc-797ae3661638",
+          "trainerid": "a961abb8-b001-4875-111b-58694238g899",
+          "memberfirstname": "Maggie",
+          "memberlastname": "Simpson",
+          "trainerlastname": "Wolfcastle",
+          "date": "Fri Sept 11 2020",
+          "area": "Weight",
+          "goal": 60,
+          "description": "a little each day",
+          "status": "open"
+        }
+      ]
+    },
+    {
+      "firstname": "lisa",
+      "lastname": "simpson",
+      "gender": "female",
+      "address": "2 far far away",
+      "height": 1.6,
+      "startingWeight": 58,
+      "dateofbirth": "2011-11-15",
+      "email": "lisa.simpson@gmail.com",
+      "password": "secret",
+      "memberid": "7263d8b0-ef5b-11ea-a542-45f22c653aa7",
+      "assessments": [
+        {
+          "assessmentid": "f9069558-b37e-4819-82cb-b1298070b441",
+          "date": "Mon Aug 07 2020",
+          "weight": 57,
+          "chest": 27,
+          "thigh": 17,
+          "upperArm": 17,
+          "waist": 27,
+          "hips": 37,
+          "trend": "green",
+          "comment": "lisa assessment"
+        }
+      ],
+      "goals": [
+        {
+          "goalid": "32ca43ea-88bb-4376-9f94-3708fc9e8a6e",
+          "memberid": "7263d8b0-ef5b-11ea-a542-45f22c653aa7",
+          "trainerid": "a961abb8-b001-4875-111b-58694238g899",
+          "memberfirstname": "Lisa",
+          "memberlastname": "Simpson",
+          "trainerlastname": "Wolfcastle",
+          "date": "Sat Sep 12 2020",
+          "area": "Upper Arm",
+          "goal": 15,
+          "description": "need some strength",
+          "status": "open"
+        }
+      ]
+    },
+    {
+      "firstname": "Marge",
+      "lastname": "Simpson",
+      "gender": "female",
+      "address": "3 far far away",
+      "height": 1.8,
+      "startingWeight": 75,
+      "dateofbirth": "1989-01-01",
+      "email": "marge.simpson@gmail.com",
+      "password": "secret",
+      "memberid": "bc364c80-ef87-11ea-8d76-5f2063336df4",
+      "assessments": [],
+      "goals": [
+        {
+          "goalid": "70733a34-b992-4f5f-b173-cc3e20dd1a38",
+          "memberid": "bc364c80-ef87-11ea-8d76-5f2063336df4",
+          "trainerid": "b874bbb5-58b9-1148-587g-5842391gh445",
+          "memberfirstname": "Marge",
+          "memberlastname": "Simpson",
+          "trainerlastname": "Byrnes",
+          "date": "Tues Aug 04 2020",
+          "area": "waist",
+          "goal": 28,
+          "description": "Work those abs",
+          "status": "open"
+        }
+      ]
+    },
+    {
+      "firstname": "Bart",
+      "lastname": "Simpson",
+      "gender": "male",
+      "address": "4 far far away",
+      "height": 1.7,
+      "startingWeight": 70,
+      "dateofbirth": "2002-02-22",
+      "email": "bart.simpson@gmail.com",
+      "password": "secret",
+      "memberid": "24696e90-f00a-11ea-8211-05dc71d38863",
+      "assessments": [],
+      "goals": [
+        {
+          "goalid": "f55e9bd0-db20-4e18-9e5f-5cf3c0247ff6",
+          "memberid": "24696e90-f00a-11ea-8211-05dc71d38863",
+          "trainerid": "b874bbb5-58b9-1148-587g-5842391gh445",
+          "memberfirstname": "Bart",
+          "memberlastname": "Simpson",
+          "trainerlastname": "Byrnes",
+          "date": "Mon Aug 03 2020",
+          "area": "Upper Arm",
+          "goal": 38,
+          "description": "Get some muscel on them",
+          "status": "open"
+        }
+      ]
+    }
+  ]
+}

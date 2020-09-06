@@ -1,7 +1,9 @@
 {{> menu id="dashboard"}}
 
-<section class="ui segment">
-  {{> listplaylists}}
-  {{> addplaylist}}
-</section>
+<script>
+    function hide() {
+        const hidden = document.createAttribute('hidden');
+        document.getElementById('prompt').setAttributeNode(hidden);
+    }
+</script>
 

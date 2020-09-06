@@ -1,0 +1,26 @@
+<section class="ui inverted blue segment">
+    <h2 class="ui center aligned header">Trainer {{trainer.lastName}}</h2>
+    <div class="ui large blue ribbon label">
+        <i class="info circle icon"></i> Gym Member Assessments
+    </div>
+    <section class="ui center aligned segment">
+        <div class="ui raised two cards">
+            {{#each members}}
+                <tr>
+                    <td>
+                        {{firstName}}
+                    </td>
+                    <td>
+                        {{LastName}}
+                    </td>
+                    <td>
+                        <a href="/trainerDashboard/removemember/{{memberid}}" data-tooltip="confirm delete"><i class="large red trash icon"></i></a>
+
+                        </a>
+                    </td>
+
+                </tr>
+            {{/each}}
+        </div>
+    </section>
+</section>

@@ -1,24 +1,72 @@
-{{> welcomemenu id="signup"}}
+{{> welcomeMenu id="signup"}}
 
-<form class="ui stacked segment form" action="/register" method="POST">
-  <h3 class="ui header">Register</h3>
-  <div class="two fields">
-    <div class="field">
-      <label>First Name</label>
-      <input placeholder="First Name" type="text"  name="firstName">
-    </div>
-    <div class="field">
-      <label>Last Name</label>
-      <input placeholder="Last Name" type="text"  name="lastName">
-    </div>
-  </div>
-  <div class="field">
-    <label>Email</label>
-    <input placeholder="Email" type="text" name="email">
-  </div>
-  <div class="field">
-    <label>Password</label>
-    <input type="password" name="password">
-  </div>
-  <button class="ui blue submit button">Submit</button>
-</form>
+<section class="ui inverted blue segment">
+    <section class="ui yellow segment">
+        <div class="ui two column grid basic middle aligned segment">
+            <div class="column">
+                <img class="ui medium centered image" src="https://image.shutterstock.com/z/stock-vector-gym-set-icon-logo-isolated-on-white-background-1349769278.jpg">
+            </div>
+            <form class="ui raised segment form" name="signup" action="/register" method="POST" >
+                <h1 class="ui red center aligned header"> Register </h1>
+                <div class="two fields">
+                    <div class="field">
+                        <label>First Name</label>
+                        <input placeholder="First Name" type="text" name="firstname">
+                    </div>
+                    <div class="field">
+                        <label>Last Name</label>
+                        <input placeholder="Last Name" type="text" name="lastname">
+                    </div>
+                </div>
+                <div class="two fields">
+                    <div class="field">
+                        <label> Gender </label>
+                        <select class="ui dropdown " name="gender" title="">
+                            <option value=""> Select</option>
+                            <option value="male"> Male</option>
+                            <option value="female"> Female</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label> Address </label>
+                        <input placeholder="Address/Eircode" name="address" required>
+                    </div>
+                </div>
+
+                <div class="three fields">
+                    <div class="field">
+                        <label> Height </label>
+                        <input placeholder="(meters)" type="number" step=".01" min="1" max="3"
+                               name="height" required>
+                    </div>
+                    <div class="field">
+                        <label> Starting Weight </label>
+                        <input placeholder="(kgs)" type="number" step=".01" min="35"
+                               max="250" name="startingWeight" required>
+                    </div>
+                    <div class="field">
+                        <label> Date of Birth </label>
+                        <input placeholder="(dd/mm/yy)" type="date" name="dateofbirth" required>
+                    </div>
+                </div>
+                <div class="two fields">
+                    <div class="field">
+                        <label> Email </label>
+                        <input placeholder="email" type="email" name="email" required>
+                    </div>
+                    <div class="field">
+                        <label> Password </label>
+                        <input placeholder="password" type="password" name="password" required>
+                    </div>
+                </div>
+
+                <button class="ui blue submit button">
+                    <div class="visible content"><i class="arrow circle up icon"></i>Sign Up</div>
+                </button>
+
+            </form>
+        </div>
+
+        </div>
+    </section>
+</section>

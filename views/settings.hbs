@@ -1,0 +1,110 @@
+{{> memberMenu id="settings"}}
+
+<div class="ui two column grid basic segment">
+    <div class="column">
+        <section class="ui inverted blue segment">
+            <section class="ui green segment">
+                <table class="ui fixed left aligned table">
+                    <h2 class="ui red center aligned header"> {{member.firstName}}'s Profile Details </h2>
+                    <td><i class="user icon"></i> Member:</td>
+                    <td>{{member.firstName}} {{member.lastName}}</td>
+                    </tr>
+                    <tr>
+                        <td><i class="mail icon"></i> Email:</td>
+                        <td>{{member.email}}</td>
+                    </tr>
+                    <tr>
+                        <td><i class="home icon"></i> Address:</td>
+                        <td>{{member.address}}</td>
+                    </tr>
+                    <tr>
+                        <td><i class="genderless icon"></i> Gender:</td>
+                        <td>{{member.gender}}</td>
+                    </tr>
+                    <tr>
+                        <td><i class="resize vertical icon"></i> Height:</td>
+                        <td>{{member.height}} meters</td>
+                    </tr>
+                    <tr>
+                        <td><i class="law icon"></i> Starting weight:</td>
+                        <td>{{member.startingWeight}} kgs</td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+    </div>
+
+    <div class="ui center aligned column">
+        <section class="ui inverted blue segment">
+            <div class="ui yellow button">Click to update Name</div>
+            <div class="ui flowing popup transition hidden">
+                <div class="ui four column divided grid">
+                    <div class="eight wide column">
+                        <form class="ui orange raised segment form" action="/settings/updatefirstname" method="POST">
+                            <input placeholder="first name" name="firstName" required>
+                            <br><br>
+                            <button class="ui animated fade blue submit button">
+                                <div class="visible content"><i class="upload icon"></i>Update</div>
+                                <div class="hidden content">Click to Save</div>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="eight wide column">
+                        <form class="ui orange raised segment form" action="/settings/updatelastname" method="POST">
+                            <input placeholder="last name" name="lastName" required>
+                            <br><br>
+                            <button class="ui animated fade blue submit button">
+                                <div class="visible content"><i class="upload icon"></i>Update</div>
+                                <div class="hidden content">Click to Save</div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui inverted blue segment">
+            <div class="ui yellow button">Click to Update account login</div>
+            <div class="ui flowing popup transition hidden">
+                <div class="ui four column divided grid">
+                    <div class="eight wide column">
+                        <form class="ui orange raised segment form" action="/settings/updateemail" method="POST">
+                            <input placeholder="email" name="email" required>
+                            <br><br>
+                            <button class="ui animated fade blue submit button">
+                                <div class="visible content"><i class="upload icon"></i>Update</div>
+                                <div class="hidden content">Click to Save</div>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="eight wide column">
+                        <form class="ui orange raised segment form" action="/settings/updatepassword" method="POST">
+                            <input placeholder="password" name="password" required>
+                            <br><br>
+                            <button class="ui animated fade blue submit button">
+                                <div class="visible content"><i class="upload icon"></i>Update</div>
+                                <div class="hidden content">Click to Save</div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui inverted blue segment">
+            <div class="ui yellow button">Click to Update Address</div>
+            <div class="ui flowing popup transition hidden">
+                <div class="ui two column divided grid">
+                    <div class="eight wide column">
+                        <form class="ui orange raised segment form" action="/settings/updateaddress" method="POST">
+                            <input placeholder="address" name="address" required>
+                            <br><br>
+                            <button class="ui animated fade blue submit button">
+                                <div class="visible content"><i class="upload icon"></i>Update</div>
+                                <div class="hidden content">Click to Save</div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

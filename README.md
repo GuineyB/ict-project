@@ -1,4 +1,4 @@
-Welcome to the Playlist 4
+Welcome to the ICT Project
 =========================
 
-Version 4 of the Playlist application
+ICT PROJECT application
