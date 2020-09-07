@@ -9,7 +9,7 @@
                         <select class="ui dropdown" name="memberid" required>
                             <option value="">Select Member</option>
                             {{#each members}}
-                                <option value="{{memberid}}">{{firstName}} {{lastName}}</option>
+                                <option value="{{memberid}}">{{firstname}} {{lastname}}</option>
                             {{/each}}
                         </select>
                     </div>
@@ -75,7 +75,7 @@
         {{#each goals}}
             <div class="ui list">
                 <tr>
-                    <td>{{memberfirstname}} {{memberlastname}}</td>
+                    <td>{{member.firstname}} {{member.lastname}}</td>
                     <td>{{date}}</td>
                     <td>{{area}}</td>
                     <td>{{goal}}</td>
