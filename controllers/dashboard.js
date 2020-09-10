@@ -130,7 +130,7 @@ const dashboard = {
     const loggedInMember = accounts.getCurrentMember(request);
     const memberid = loggedInMember.memberid;
     const newAssessment = {
-      assessmentid: uuid(),
+      assessmentid: uuid.v1(),
       date: new Date().toDateString(),
       weight: Number(request.body.weight),
       chest: Number(request.body.chest),
@@ -220,15 +220,6 @@ const dashboard = {
     response.redirect("/dashboard");
   },
 
-  updateGender(request, response) {
-    logger.info("updating gender rendering");
-    const loggedInMember = accounts.getCurrentMember(request);
-    loggedInMember.gender = request.body.gender;
-    logger.debug(`saving ${loggedInMember.firstName}'s gender??? Really???`);
-    memberStore.store.save();
-    response.redirect("/dashboard");
-  },
-
   updateHeight(request, response) {
     logger.info("updating height rendering");
     const loggedInMember = accounts.getCurrentMember(request);
@@ -238,14 +229,6 @@ const dashboard = {
     response.redirect("/dashboard");
   },
 
-  updateStartingWeight(request, response) {
-    logger.info("updating starting weight rendering");
-    const loggedInMember = accounts.getCurrentMember(request);
-    loggedInMember.startingWeight = Number(request.body.startingWeight);
-    logger.debug(`saving ${loggedInMember.firstName}'s starting weight`);
-    memberStore.store.save();
-    response.redirect("/dashboard");
-  },
 
   memberGoals(request, response) {
     logger.info("members get goals rendering");
@@ -267,7 +250,7 @@ const dashboard = {
     const memberid = loggedInMember.memberid;
     const date = new Date(request.body.date);
     const newGoal = {
-      goalid: uuid(),
+      goalid: uuid.v1(),
       date: date.toDateString(),
       area: request.body.area,
       goal: request.body.goal,

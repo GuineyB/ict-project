@@ -5,9 +5,9 @@
         <section class="ui inverted blue segment">
             <section class="ui green segment">
                 <table class="ui fixed left aligned table">
-                    <h2 class="ui red center aligned header"> {{member.firstName}}'s Profile Details </h2>
+                    <h2 class="ui red center aligned header"> {{member.firstname}}'s Profile Details </h2>
                     <td><i class="user icon"></i> member:</td>
-                    <td>{{member.firstName}} {{member.lastName}}</td>
+                    <td>{{member.firstname}} {{member.lastname}}</td>
                     </tr>
                     <tr>
                         <td><i class="mail icon"></i> Email:</td>
@@ -40,7 +40,7 @@
             <div class="ui flowing popup transition hidden">
                 <div class="ui four column divided grid">
                     <div class="eight wide column">
-                        <form class="ui orange raised segment form" action="/settings/updatefirstname" method="POST">
+                        <form class="ui orange raised segment form" action="/settings/updateFirstname" method="POST">
                             <input placeholder="first name" name="firstName" required>
                             <br><br>
                             <button class="ui animated fade blue submit button">
@@ -50,7 +50,7 @@
                         </form>
                     </div>
                     <div class="eight wide column">
-                        <form class="ui orange raised segment form" action="/settings/updatelastname" method="POST">
+                        <form class="ui orange raised segment form" action="/settings/updateLastname" method="POST">
                             <input placeholder="last name" name="lastName" required>
                             <br><br>
                             <button class="ui animated fade blue submit button">
@@ -67,7 +67,7 @@
             <div class="ui flowing popup transition hidden">
                 <div class="ui four column divided grid">
                     <div class="eight wide column">
-                        <form class="ui orange raised segment form" action="/settings/updateemail" method="POST">
+                        <form class="ui orange raised segment form" action="/settings/updateEmail" method="POST">
                             <input placeholder="email" name="email" required>
                             <br><br>
                             <button class="ui animated fade blue submit button">
@@ -77,7 +77,7 @@
                         </form>
                     </div>
                     <div class="eight wide column">
-                        <form class="ui orange raised segment form" action="/settings/updatepassword" method="POST">
+                        <form class="ui orange raised segment form" action="/settings/updatePassword" method="POST">
                             <input placeholder="password" name="password" required>
                             <br><br>
                             <button class="ui animated fade blue submit button">
@@ -94,7 +94,7 @@
             <div class="ui flowing popup transition hidden">
                 <div class="ui two column divided grid">
                     <div class="eight wide column">
-                        <form class="ui orange raised segment form" action="/settings/updateaddress" method="POST">
+                        <form class="ui orange raised segment form" action="/settings/updateAddress" method="POST">
                             <input placeholder="address" name="address" required>
                             <br><br>
                             <button class="ui animated fade blue submit button">

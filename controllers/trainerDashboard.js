@@ -92,7 +92,7 @@ const trainerDashboard = {
     const member = memberStore.getMemberById(memberid);
     const date = new Date(request.body.date);
     const newGoal = {
-      goalid: uuid(),
+      goalid: uuid.v1(),
       memberid: memberid,
       trainerid: trainerid,
       memberfirstname: member.firstName,
@@ -129,6 +129,42 @@ const trainerDashboard = {
     }
   },
 
+  editTargetDate(request, response) {
+    logger.info('updating class rendering ');
+    const loggedInTrainer = accounts.getCurrentTrainer(request);
+    const goalid = request.params.goalid;
+    const goalToUpdate = trainerStore.getGoalById(loggedInTrainer.trainerid, goalid);
+    const date = new Date(request.body.date);
+    goalToUpdate.date = date.toDateString();
+    logger.debug(`updating goal for Coach ${loggedInTrainer.lastName}`);
+    trainerStore.store.save();
+    response.redirect('/trainerDashboard/trainerGoals');
+  },
+
+
+  editTargetArea(request, response) {
+    logger.info('updating class rendering ');
+    const loggedInTrainer = accounts.getCurrentTrainer(request);
+    const goalid = request.params.goalid;
+    const goalToUpdate = trainerStore.getGoalById(loggedInTrainer.trainerid, goalid);
+    goalToUpdate.area = request.body.area;
+    logger.debug(`updating goal for Coach ${loggedInTrainer.lastName}`);
+    trainerStore.store.save();
+    response.redirect('/trainerDashboard/trainerGoals');
+  },
+
+  editTargetGoal(request, response) {
+    logger.info('updating class rendering ');
+    const loggedInTrainer = accounts.getCurrentTrainer(request);
+    const goalid = request.params.goalid;
+    const goalToUpdate = trainerStore.getGoalById(loggedInTrainer.trainerid, goalid);
+    goalToUpdate.goal = request.body.goal;
+    logger.debug(`updating goal for Coach ${loggedInTrainer.lastName}`);
+    trainerStore.store.save();
+    response.redirect('/trainerDashboard/trainerGoals');
+  },
+
+
   removeGoal(request, response) {
     logger.info("removing goal rendering");
     const goalid = request.params.goalid;
@@ -139,7 +175,7 @@ const trainerDashboard = {
   },
 
   trainerUpdateGoal(request, response) {
-    logger.info("update booking rendering ");
+    logger.info("update goal rendering ");
     const loggedInTrainer = accounts.getCurrentTrainer(request);
     const goalid = request.params.goalid;
     const goalToUpdate = trainerStore.getGoalById(

@@ -38,6 +38,17 @@
           "goal": 60,
           "description": "a little each day",
           "status": "open"
+        },
+        {
+          "goalid": "5a087200-f369-11ea-a1ba-41a3332af4f2",
+          "memberid": "82b0c6b0-ee02-11ea-abbc-797ae3661638",
+          "trainerid": "b874bbb5-58b9-1148-587g-5842391gh445",
+          "trainerlastname": "Byrnes",
+          "date": "Tue Dec 15 2020",
+          "area": "",
+          "goal": 1,
+          "description": "DD",
+          "status": "open"
         }
       ]
     },
@@ -52,20 +63,7 @@
       "email": "lisa.simpson@gmail.com",
       "password": "secret",
       "memberid": "7263d8b0-ef5b-11ea-a542-45f22c653aa7",
-      "assessments": [
-        {
-          "assessmentid": "f9069558-b37e-4819-82cb-b1298070b441",
-          "date": "Mon Aug 07 2020",
-          "weight": 57,
-          "chest": 27,
-          "thigh": 17,
-          "upperArm": 17,
-          "waist": 27,
-          "hips": 37,
-          "trend": "green",
-          "comment": "lisa assessment"
-        }
-      ],
+      "assessments": [],
       "goals": [
         {
           "goalid": "32ca43ea-88bb-4376-9f94-3708fc9e8a6e",
@@ -93,7 +91,32 @@
       "email": "marge.simpson@gmail.com",
       "password": "secret",
       "memberid": "bc364c80-ef87-11ea-8d76-5f2063336df4",
-      "assessments": [],
+      "assessments": [
+        {
+          "assessmentid": "d0d8ac20-f377-11ea-84c8-a53cfb16b077",
+          "date": "Thu Sep 10 2020",
+          "weight": 50,
+          "chest": 15,
+          "thigh": 15,
+          "upperArm": null,
+          "waist": 32,
+          "hips": 32,
+          "trend": "red",
+          "comment": ""
+        },
+        {
+          "assessmentid": "75d25650-f39f-11ea-b0ef-e3bbca6ef0a9",
+          "date": "Thu Sep 10 2020",
+          "weight": 60,
+          "chest": 36,
+          "thigh": 15,
+          "upperArm": null,
+          "waist": 34,
+          "hips": 36,
+          "trend": "",
+          "comment": ""
+        }
+      ],
       "goals": [
         {
           "goalid": "70733a34-b992-4f5f-b173-cc3e20dd1a38",
@@ -106,7 +129,7 @@
           "area": "waist",
           "goal": 28,
           "description": "Work those abs",
-          "status": "open"
+          "status": "achieved"
         }
       ]
     },
@@ -121,7 +144,20 @@
       "email": "bart.simpson@gmail.com",
       "password": "secret",
       "memberid": "24696e90-f00a-11ea-8211-05dc71d38863",
-      "assessments": [],
+      "assessments": [
+        {
+          "assessmentid": "5e697d30-f3a0-11ea-b0ef-e3bbca6ef0a9",
+          "date": "Thu Sep 10 2020",
+          "weight": 45,
+          "chest": 32,
+          "thigh": 16,
+          "upperArm": null,
+          "waist": 30,
+          "hips": 32,
+          "trend": "",
+          "comment": ""
+        }
+      ],
       "goals": [
         {
           "goalid": "f55e9bd0-db20-4e18-9e5f-5cf3c0247ff6",
@@ -134,9 +170,58 @@
           "area": "Upper Arm",
           "goal": 38,
           "description": "Get some muscel on them",
+          "status": "processing result"
+        },
+        {
+          "goalid": "63529170-f345-11ea-a64d-c1b187dbcba5",
+          "memberid": "24696e90-f00a-11ea-8211-05dc71d38863",
+          "trainerid": "a961abb8-b001-4875-111b-58694238g899",
+          "trainerlastname": "Wolfcastle",
+          "date": "Sat Oct 10 2020",
+          "area": "Weight",
+          "goal": 78,
+          "description": "test",
+          "status": "open"
+        },
+        {
+          "goalid": "1fcb6ed0-f35f-11ea-be0f-9f4c44b334bf",
+          "memberid": "24696e90-f00a-11ea-8211-05dc71d38863",
+          "trainerid": "a961abb8-b001-4875-111b-58694238g899",
+          "trainerlastname": "Wolfcastle",
+          "date": "Tue Sep 15 2020",
+          "area": "Waist",
+          "goal": 28,
+          "description": "reduce waist",
           "status": "open"
         }
       ]
+    },
+    {
+      "firstname": "Nelson",
+      "lastname": "Muntz",
+      "gender": "male",
+      "address": "6 far far away",
+      "height": "1.5",
+      "startingWeight": "80",
+      "dateofbirth": "2001-01-01",
+      "email": "nelson@gmail.com",
+      "password": "secret",
+      "memberid": "bfc8d0e0-f39f-11ea-b0ef-e3bbca6ef0a9",
+      "assessments": [
+        {
+          "assessmentid": "f66d9db0-f39f-11ea-b0ef-e3bbca6ef0a9",
+          "date": "Thu Sep 10 2020",
+          "weight": 75,
+          "chest": 40,
+          "thigh": 15,
+          "upperArm": null,
+          "waist": 42,
+          "hips": 45,
+          "trend": "green",
+          "comment": ""
+        }
+      ],
+      "goals": []
     }
   ]
 }

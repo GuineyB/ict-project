@@ -1,4 +1,4 @@
-<div<div class="ui two column grid basic segment">
+<div class="ui two column grid basic segment">
     <div class="column">
         <section class="ui inverted brown segment">
             <div class="ui large blue left ribbon label">
@@ -27,4 +27,56 @@
             </section>
         </section>
     </div>
+</div>
+
+<div class="column">
+    <section class="ui inverted brown segment">
+        <section class="ui inverted brown segment">
+            <div class="ui raised grid">
+                <div class="column">
+                    <form class="ui yellow raised segment form" action="/trainerDashboard/editTargetDate/{{goalToUpdate.goalid}}" method="POST">
+                        <div class="ui input left icon">
+                            <i class="calendar icon"></i>
+                            <input placeholder="date" type="date" name="date" required>
+                        </div>
+                        &emsp;&emsp;&emsp;
+                        <button class="ui animated fade blue submit button">
+                            <div class="visible content"><i class="upload icon"></i>Update Target Date</div>
+                            <div class="hidden content">Click to Save</div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="ui inverted brown segment">
+            <div class="ui grid">
+                <div class="ui column">
+                    <form class="ui yellow raised segment form" action="/trainerDashboard/editTargetArea/{{goalToUpdate.goalid}}" method="POST">
+                        <div class="two fields">
+                            <div class="field">
+                                <select class="ui dropdown " name="area" title="area">
+                                    <option value=""> Select Target Area</option>
+                                    <option value="Weight"> Weight</option>
+                                    <option value="Chest"> Chest</option>
+                                    <option value="Thigh"> Thigh</option>
+                                    <option value="Upper Arm"> Upper Arm</option>
+                                    <option value="Waist"> Waist</option>
+                                    <option value="Hips"> Hips</option>
+                                </select>
+                            </div>
+                            &emsp;&emsp;&emsp;
+                            <div class="field">
+                                <button class="ui animated fade blue submit button">
+                                    <div class="visible content"><i class="upload icon"></i>Update Target Area</div>
+                                    <div class="hidden content">Click to Save</div>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </section>
+</div>
 </div>

@@ -2,7 +2,7 @@
     <section class="ui large inverted yellow segment">
 
         <div class="content">
-            <form class="ui raised center aligned segment form" name="memberAddAssessment" action="/trainerDashboard/traineraddgoal" method="POST">
+            <form class="ui raised center aligned segment form" name="memberAddAssessment" action="/trainerDashboard/trainerAddGoal" method="POST">
                 <div class="four fields">
                     <div class="three field wide">
                         <label>Member </label>
@@ -82,12 +82,12 @@
                     <td>{{description}}</td>
                     <td>{{status}}</td>
                     <td>
-                        <a href="/trainerDashboard/{{trainerid}}/trainerupdategoal/{{goalid}}">
+                        <a href="/trainerDashboard/{{trainerid}}/trainerUpdateGoal/{{goalid}}">
                             <i class="large teal upload icon"></i>
                         </a>
                     </td>
                     <td>
-                        <a href="/trainerDashboard/removegoal/{{goalid}}">
+                        <a href="/trainerDashboard/removeGoal/{{goalid}}">
                             <i class=" large red trash icon"></i>
                         </a>
                     </td>

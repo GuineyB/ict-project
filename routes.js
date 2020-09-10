@@ -27,46 +27,37 @@ router.get("/dashboard", dashboard.index);
 router.get("/trainerDashboard", trainerDashboard.index);
 
 router.get("/settings", dashboard.settings);
-router.post("/settings/updatefirstname", dashboard.updateFirstName);
-router.post("/settings/updatelastname", dashboard.updateLastName);
-router.post("/settings/updateemail", dashboard.updateEmail);
-router.post("/settings/updatepassword", dashboard.updatePassword);
-router.post("/settings/updateaddress", dashboard.updateAddress);
-router.post("/settings/updategender", dashboard.updateGender);
-router.post("/settings/updateheight", dashboard.updateHeight);
-router.post("/settings/updatestartingweight", dashboard.updateStartingWeight);
+router.post("/settings/updateFirstname", dashboard.updateFirstName);
+router.post("/settings/updateLastname", dashboard.updateLastName);
+router.post("/settings/updateEmail", dashboard.updateEmail);
+router.post("/settings/updatePassword", dashboard.updatePassword);
+router.post("/settings/updateAddress", dashboard.updateAddress);
+router.post("/settings/updateHeight", dashboard.updateHeight);
 
-router.post("/dashboard/memberaddassessment", dashboard.memberAddAssessment);
-router.get(
-  "/dashboard/removeassessment/:assessmentid",
-  dashboard.removeAssessment
-);
 
-router.get("/dashboard/membergoals", dashboard.memberGoals);
-router.post("/dashboard/memberaddgoal", dashboard.memberAddGoal);
-router.get("/dashboard/removegoal/:goalid", dashboard.removeGoal);
+router.post("/dashboard/memberAddAssessment", dashboard.memberAddAssessment);
+router.get("/dashboard/removeAssessment/:assessmentid", dashboard.removeAssessment);
 
-router.get(
-  "/trainerDashboard/trainerviewassessments/:memberid",
-  trainerDashboard.trainerViewAssessments
-);
-router.get(
-  "/trainerDashboard/:memberid/removeassessment/:assessmentid",
-  trainerDashboard.removeAssessment
-);
-router.post(
-  "/trainerDashboard/:memberid/updatecomment/:assessmentid",
-  trainerDashboard.updateComment
-);
-router.get(
-  "/trainerDashboard/removemember/:memberid",
-  trainerDashboard.removeMember
-);
+router.get("/dashboard/memberGoals", dashboard.memberGoals);
+router.post("/dashboard/memberAddGoal", dashboard.memberAddGoal);
+router.get("/dashboard/removeGoal/:goalid", dashboard.removeGoal);
 
-router.get("/trainerDashboard/trainergoals", trainerDashboard.trainerGoals);
-router.post(
-  "/trainerDashboard/traineraddgoal",
-  trainerDashboard.trainerAddGoal
-);
+router.get("/trainerDashboard/trainerViewAssessments/:memberid",trainerDashboard.trainerViewAssessments);
+router.get("/trainerDashboard/:memberid/removeAssessment/:assessmentid",trainerDashboard.removeAssessment);
+router.post("/trainerDashboard/:memberid/updateComment/:assessmentid",trainerDashboard.updateComment);
+router.get("/trainerDashboard/removeMember/:memberid", trainerDashboard.removeMember);
+
+router.get("/trainerDashboard/trainerGoals", trainerDashboard.trainerGoals);
+router.post(  "/trainerDashboard/trainerAddGoal",trainerDashboard.trainerAddGoal);
+
+router.get('/trainerDashboard/trainerGoals', trainerDashboard.trainerGoals);
+router.post('/trainerDashboard/trainerAddGoal', trainerDashboard.trainerAddGoal);
+router.get('/trainerDashboard/removeGoal/:goalid', trainerDashboard.removeGoal);
+
+router.get('/trainerDashboard/:memberid/trainerUpdateGoal/:goalid', trainerDashboard.trainerUpdateGoal);
+router.post('/trainerDashboard/editTargetDate/:goalid', trainerDashboard.editTargetDate);
+router.post('/trainerDashboard/editTargetArea/:goalid', trainerDashboard.editTargetArea);
+router.post('/trainerDashboard/editTargetGoal/:goalid', trainerDashboard.editTargetGoal);
+
 
 module.exports = router;

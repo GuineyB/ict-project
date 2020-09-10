@@ -35,26 +35,27 @@ const accounts = {
 
   register(request, response) {
     const member = request.body;
-    member.id = uuid.v1();
+    member.memberid = uuid.v1();
+    member.assessments = [];
+    member.goals = [];
     memberStore.addMember(member);
-    logger.info(`registering ${member.email}`);
-    response.redirect("/");
+    logger.debug(`registering ${member.email}`);
+    response.redirect('/login');
   },
-
   authenticate(request, response) {
     const member = memberStore.getMemberByEmail(request.body.email);
     const trainer = trainerStore.getTrainerByEmail(request.body.email);
     if (member && member.password === request.body.password) {
-      response.cookie("member", member.memberid);
+      response.cookie('member', member.memberid);
       logger.debug(`logging in ${member.email}`);
-      response.redirect("/dashboard");
+      response.redirect('/dashboard');
     } else if (trainer && trainer.password === request.body.password) {
-      response.cookie("trainer", trainer.trainerid);
+      response.cookie('trainer', trainer.trainerid);
       logger.debug(`logging in ${trainer.email}`);
-      response.redirect("/trainerDashboard");
+      response.redirect('/trainerDashboard');
     } else {
       logger.debug(`authentication failed`);
-      response.redirect("/login");
+      response.redirect('/login');
     }
   },
 

@@ -9,29 +9,27 @@
       "trainerid": "a961abb8-b001-4875-111b-58694238g899",
       "goals": [
         {
-          "goalid": "69069571-a37e-4818-81cf-f36a7070b331",
-          "memberid": "82b0c6b0-ee02-11ea-abbc-797ae3661638",
-          "trainerid": "a961abb8-b001-4875-111b-58694238g899",
-          "memberfirstname": "Maggie",
-          "memberlastname": "Simpson",
-          "trainerlastname": "Wolfcastle",
-          "date": "Fri Sept 11 2020",
-          "area": "Weight",
-          "goal": 60,
-          "description": "a little each day",
-          "status": "open"
-        },
-        {
           "goalid": "32ca43ea-88bb-4376-9f94-3708fc9e8a6e",
           "memberid": "7263d8b0-ef5b-11ea-a542-45f22c653aa7",
           "trainerid": "a961abb8-b001-4875-111b-58694238g899",
           "memberfirstname": "Lisa",
           "memberlastname": "Simpson",
           "trainerlastname": "Wolfcastle",
-          "date": "Sat Sep 12 2020",
-          "area": "Upper Arm",
+          "date": "Tue Dec 01 2020",
+          "area": "Weight",
           "goal": 30,
           "description": "need some strength",
+          "status": "open"
+        },
+        {
+          "goalid": "2c3c4ce0-f33f-11ea-a815-b754412f1d4c",
+          "memberid": "82b0c6b0-ee02-11ea-abbc-797ae3661638",
+          "trainerid": "a961abb8-b001-4875-111b-58694238g899",
+          "trainerlastname": "Wolfcastle",
+          "date": "Sun Oct 10 2010",
+          "area": "Weight",
+          "goal": 45,
+          "description": "work hard to achieve goal",
           "status": "open"
         }
       ]
@@ -52,22 +50,20 @@
           "memberlastname": "Simpson",
           "trainerlastname": "Byrnes",
           "date": "Tues Aug 04 2020",
-          "area": "waist",
+          "area": "Upper Arm",
           "goal": 28,
           "description": "Work those abs",
           "status": "open"
         },
         {
-          "goalid": "f55e9bd0-db20-4e18-9e5f-5cf3c0247ff6",
-          "memberid": "24696e90-f00a-11ea-8211-05dc71d38863",
+          "goalid": "73bc8090-f39d-11ea-90c4-27ed7a44bef2",
+          "memberid": "08244070-f39d-11ea-90c4-27ed7a44bef2",
           "trainerid": "b874bbb5-58b9-1148-587g-5842391gh445",
-          "memberfirstname": "Bart",
-          "memberlastname": "Simpson",
           "trainerlastname": "Byrnes",
-          "date": "Mon Aug 03 2020",
-          "area": "Upper Arm",
-          "goal": 38,
-          "description": "Get some muscel on them",
+          "date": "Thu Dec 10 2020",
+          "area": "Weight",
+          "goal": 70,
+          "description": "hard work",
           "status": "open"
         }
       ]

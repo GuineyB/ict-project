@@ -29,7 +29,7 @@
                         <td> {{comment}} </td>
                         <td><i class="large {{trend}} bullseye icon"></i></td>
                         <td>
-                            <a href="/trainerDashboard/{{../memberid}}/removeassessment/{{assessmentid}}">
+                            <a href="/trainerDashboard/{{../memberid}}/removeAssessment/{{assessmentid}}">
                                 <i class=" large red trash icon"></i>
                             </a>
                         </td>
@@ -40,7 +40,7 @@
 
             <section class="ui center aligned section">
                 <h4> Comment </h4>
-                <form class="ui section form" action="/trainerDashboard/{{../memberid}}/updatecomment/{{assessmentid}}"
+                <form class="ui section form" action="/trainerDashboard/{{../memberid}}/updateComment/{{assessmentid}}"
                       method="POST">
                     <div>
                         <input placeholder="Insert comment..." name="comment" required>

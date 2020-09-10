@@ -32,7 +32,7 @@ const memberStore = {
 
   addAssessment(memberid, assessment) {
     const member = this.getMemberById(memberid);
-    member.assessments.unshift(assessment);
+    member.assessments.push(assessment);
     this.store.save();
   },
 
